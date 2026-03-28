@@ -18,8 +18,9 @@ export const personalInfo = {
 export const typingRoles = [
   "Full Stack Engineer",
   "Competitive Programmer",
-  "React Developer",
+  "MERN stack Developer",
   "Problem Solver",
+  "Backend Develooper"
   // ← Add or remove roles as you like
 ];
 
@@ -28,10 +29,10 @@ export const projects = [
     id: 1,
     title: "CareerHex",           // ← Replace with your project name
     description: "A full-stack web app that does something amazing with real-time data and seamless UX.",
-    image: null,                       // ← Path like "/projects/alpha.png" once you add images
+    image: "/career2.png",                       // ← Path like "/projects/alpha.png" once you add images
     tags: ["Next.js", "PostgreSQL", "OpenAi Api", "Tailwind", "GitHub Api", "LeetCode GraphQl", "OAuth"],
-    github: "https://github.com/yourhandle/project",
-    live: "https://yourproject.live",
+    github: "https://github.com/Pratham-k-dev/careerhex",
+    live: "https://carrierhex.vercel.app/",
     featured: true,
     featuredDescription: "A developer career readiness analyzer, generates AI based inisghts, Recommendations, Roadmap, by evaluating GitHub activity, LeetCode stats, and self-reported data",
     // ↑ Longer description for the featured card

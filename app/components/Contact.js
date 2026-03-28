@@ -13,7 +13,7 @@ function ContactLink({ href, icon, label, sub }) {
       transition={{ type: "spring", stiffness: 400, damping: 20 }}
       className="group flex items-center gap-4 p-5 rounded-2xl border border-[rgba(240,237,230,0.07)] bg-[#141414] hover:border-[rgba(251,191,36,0.2)] hover:bg-[#181818] transition-all duration-300"
     >
-      <span className="text-2xl">{icon}</span>
+      <span className="text-2xl"><img src={icon}/></span>
       <div className="flex-1">
         <div className="font-medium text-[#F0EDE6] group-hover:text-[#FBBF24] transition-colors text-sm">
           {label}
@@ -73,7 +73,8 @@ export default function Contact() {
             </motion.p>
 
             <motion.a
-              href={`mailto:${personalInfo.email}`}
+              href={`${personalInfo.linkedin}`}
+              target="_blank" rel="noopener noreferrer"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -82,7 +83,7 @@ export default function Contact() {
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#FBBF24] text-[#0E0E0E] font-semibold text-sm rounded-full hover:bg-[#F59E0B] transition-colors duration-300 hover:shadow-[0_0_32px_rgba(251,191,36,0.3)]"
             >
-              Send a message
+              Lets Connect
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
               </svg>
@@ -93,8 +94,8 @@ export default function Contact() {
           <StaggerContainer className="space-y-3" delay={0.2}>
             <StaggerItem>
               <ContactLink
-                href={`mailto:${personalInfo.email}`}
-                icon="✉️"
+                href={`${personalInfo.email}`}
+                icon="/mail.svg"
                 label="Email"
                 sub={personalInfo.email}
               />
@@ -102,7 +103,7 @@ export default function Contact() {
             <StaggerItem>
               <ContactLink
                 href={personalInfo.github}
-                icon="🐙"
+                icon="/github.svg"
                 label="GitHub"
                 sub={personalInfo.github.replace("https://", "")}
               />
@@ -110,7 +111,7 @@ export default function Contact() {
             <StaggerItem>
               <ContactLink
                 href={personalInfo.linkedin}
-                icon="💼"
+                icon="/lin.svg"
                 label="LinkedIn"
                 sub={personalInfo.linkedin.replace("https://", "")}
               />
@@ -119,7 +120,7 @@ export default function Contact() {
               <StaggerItem>
                 <ContactLink
                   href={personalInfo.twitter}
-                  icon="𝕏"
+                  icon=""
                   label="Twitter / X"
                   sub={personalInfo.twitter.replace("https://", "")}
                 />
