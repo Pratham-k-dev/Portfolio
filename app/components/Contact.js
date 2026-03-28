@@ -111,7 +111,7 @@ export default function Contact() {
             <StaggerItem>
               <ContactLink
                 href={personalInfo.linkedin}
-                icon="/lin.svg"
+                icon="/Lin.svg"
                 label="LinkedIn"
                 sub={personalInfo.linkedin.replace("https://", "")}
               />
